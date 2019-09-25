@@ -1,4 +1,5 @@
-# investigador
+# Glicom
+https://glicom.pt
 
 
 # componentes
