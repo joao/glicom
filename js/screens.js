@@ -3,32 +3,32 @@ var screens = [
     "id": 1,
     "bg_color": "#D53738",
     "type": "image",
-    "text": "Screen 1",
+    "text": "Start",
     "questions": true
   },
   {
     "id": 2,
     "bg_color": "#638867",
-    "text": "Screen 2",
+    "text": "Proteína",
     "type": "question",
     "questions": false
   },
   {
     "id": 3,
     "bg_color": "#FAF429",
-    "text": "Screen 3",
+    "text": "Célula",
     "type": "text"
   },
   {
     "id": 4,
     "bg_color": "purple",
-    "text": "Screen 4",
+    "text": "ADN",
     "type": "question"
   },
   {
     "id": 5,
     "bg_color": "orange",
-    "text": "Screen 5",
+    "text": "Sangue",
     "type": "image",
   },
   {

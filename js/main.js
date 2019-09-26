@@ -29,29 +29,6 @@ function render() {
   }
 
 
- /* Register clicks
-  * Run on every update
-  --------------------------------------------- */
- // function register_clicker() {
-
- //   let hammerLeft = new Hammer(document.querySelector('.left'))
- //   let hammerRight = new Hammer(document.querySelector('.right'))
-
- //    hammerLeft.on('tap', (e) => {
- //      if (app.current != 1) {
- //        app.current = app.current - 1
- //      }
- //    })
-
- //    hammerRight.on('tap', (e) => {
- //      if (app.current != app.screens.length) {
- //        app.current = app.current + 1
- //      }
- //    })
-
- //  }
-
-
 
 
 
@@ -67,9 +44,6 @@ function render() {
         diasAnimado: dias_bolsa
     },
     computed: {
-       animatedDias: function() {
-         return this.diasAnimado.toFixed(0);
-       }
     },
     methods: {
       startCountdown: function() {
@@ -101,6 +75,9 @@ function render() {
         app.goTo(1);
         app.menu = false;
         app.dias = dias_bolsa;
+      },
+      gameOver: function() {
+
       }
     },
     updated: function() {
@@ -111,11 +88,20 @@ function render() {
     mounted: function() {
       register_press();
       this.startCountdown();
+      // a = 65; b = 66; c = 67; d = 68)
+      window.addEventListener('keydown', function(ev) {
+        if (ev.key == 'a') {
+          app.goTo(2);
+        } else if (ev.key == 'b') {
+          app.goTo(3);
+        } else if (ev.key == 'c') {
+          app.goTo(4)
+        } else if (ev.key == 'd') {
+          app.goTo(5)
+        }
+       });
     },
     watch: {
-      // dias: function(newValue) {
-      //   TweenLite.to(this.$data, 1, { diasAnimado: newValue, ease: Linear.easeNone });
-      // }
     },
   })
 
