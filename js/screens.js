@@ -27,7 +27,7 @@ var screens = [
     "id": 5,
     "bg_color": "orange",
     "text": "Screen #5",
-    "type": "image"
+    "type": "image",
   },
   {
     "id": 6,

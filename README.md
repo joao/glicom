@@ -1,6 +1,9 @@
 # Glicom
 https://glicom.pt
 
+# Documentação
+Google Drive:  
+https://drive.google.com/drive/folders/1qkhns3D_P6Zqea7A4hZkwrih6BL4Hb5w
 
 # componentes
 - imagem gráfica
@@ -10,6 +13,9 @@ https://glicom.pt
 - buttons
 
 # Design
+
+Google Font:  
+https://fonts.google.com/specimen/Press+Start+2P
 
 
 # abordagem
@@ -21,7 +27,8 @@ https://glicom.pt
 Prealoder:  
 https://www.npmjs.com/package/vue-image-preloader
 
-
+Referência:
+https://levelup.gitconnected.com/building-the-instagram-story-auto-play-ux-in-vue-347670e979ba
 
 
 # Domínio glicom.pt
