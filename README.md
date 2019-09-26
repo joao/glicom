@@ -1,6 +1,9 @@
 # Glicom
 https://glicom.pt
 
+# Spreadhsset
+https://docs.google.com/spreadsheets/d/1S6wPYTSRpvkI6Y364uU1xOrxR-ZeS56sCY8Rku4oZE0/edit#gid=0
+
 # Documentação
 Google Drive:  
 https://drive.google.com/drive/folders/1qkhns3D_P6Zqea7A4hZkwrih6BL4Hb5w

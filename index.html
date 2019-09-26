@@ -6,6 +6,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="css/main.css"/>
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
@@ -14,7 +15,7 @@
   <script src="js/main.js"></script>
 
 </head>
-<body class="sans-serif">
+<body>
 
   <main id="app">
     <nav class="dn">
@@ -30,11 +31,25 @@
             class="pa4"
             :class="'screen_' + screen.id">
 
+            <!-- Screen content -->
             <h1>{{ screen.text }}</h1>
-            <h3>{{ screen.type }}</h3>
+            <h3 class="dn">{{ screen.type }}</h3>
+            <div v-if="screen.questions">
+              <button class="db" v-on:click="goTo(2)">A: Protéina</button>
+              <button class="db" v-on:click="goTo(3)">B: Célula</button>
+              <button class="db" v-on:click="goTo(4)">C: ADN</button>
+              <button class="db" v-on:click="goTo(5)">D: Sangue</button>
+            </div>
+
+            <!-- Debug: restart -->
+            <div v-if="screen.id != 1">
+              <button class="db" v-on:click="goTo(1)">Start Again</button>
+            </div>
+
+            <!-- Option Modals -->
 
             <!-- Clicker -->
-            <div class="clicker">
+            <div class="clicker dn">
               <div class="left" v-on:click="previous">
               </div>
               <div class="right"  v-on:click="next">
@@ -43,12 +58,8 @@
 
     <section id="menu" class="pa4 bg-light-pink" v-if="menu == true">
       <h1 class="black">Menu</h1>
-      <h5>Restart Game</h5>
-      <h5>Help</h5>
-      <h5>About</h5>
+      <button class="db" v-on:click="goTo(1); menu = false;">Restart Game</button>
     </section>
-
-    <
   </main>
 
 

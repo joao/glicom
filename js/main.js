@@ -71,6 +71,9 @@ function render() {
         if (app.current != app.screens.length) {
           app.current = app.current + 1
         }
+      },
+      goTo: function(screen_number) {
+        app.current = screen_number
       }
     },
     updated: function() {

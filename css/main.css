@@ -3,8 +3,12 @@ html {
   background-color: black;
 }
 
-html, body, main, section{
-  height: 100%;
+body {
+      font-family: 'Press Start 2P', Courier, monospace;
+}
+
+main, section {
+  height: 100vh;
   width: 100%;
 }
 
