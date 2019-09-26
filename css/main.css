@@ -34,6 +34,10 @@ section {
   background-position: center bottom;
 }
 
+#menu {
+  height: 100vh;
+}
+
 /* Counter */
 div#dias {
   position: fixed;
