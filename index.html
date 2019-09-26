@@ -9,7 +9,9 @@
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="css/main.css"/>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
   <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
   <script src="js/screens.js"></script>
   <script src="js/main.js"></script>
@@ -23,6 +25,11 @@
         <div></div>
       </div>
     </nav>
+
+    <!-- Dias counter -->
+    <div v-model="dias" class="dias">
+      {{ animatedDias }} dias
+    </div>
     
     <section v-for="screen in screens"
             :key="screen.id"
@@ -30,6 +37,7 @@
             v-if="current == screen.id && menu == false"
             class="pa4"
             :class="'screen_' + screen.id">
+
 
             <!-- Screen content -->
             <h1>{{ screen.text }}</h1>
@@ -58,7 +66,7 @@
 
     <section id="menu" class="pa4 bg-light-pink" v-if="menu == true">
       <h1 class="black">Menu</h1>
-      <button class="db" v-on:click="goTo(1); menu = false;">Restart Game</button>
+      <button class="db" v-on:click="restartGame">Restart Game</button>
     </section>
   </main>
 

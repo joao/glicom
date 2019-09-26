@@ -1,5 +1,8 @@
 
 var app;
+var dias_bolsa = 1460
+var dias_timer = 100 // ms
+var dias_subtract = 1
 
 
 function render() {
@@ -18,7 +21,9 @@ function render() {
       });
 
    hammertime.on('press', (e) => {
-      app.menu = !app.menu
+      if (app.menu != true) {
+        app.menu = true
+      }
     })
   }
 
@@ -56,12 +61,28 @@ function render() {
     data: {
         screens: screens,
         current: 1,
-        menu: false
+        menu: false,
+        dias: dias_bolsa,
+        diasAnimado: dias_bolsa
     },
     computed: {
-
+       animatedDias: function() {
+         return this.diasAnimado.toFixed(0);
+       }
     },
     methods: {
+      startCountdown: function() {
+        setInterval(() => {
+          if (app.dias >= 1) {
+            app.dias = app.dias - dias_subtract;
+          } else {
+            // Show screen that the game is over
+          }
+        }, dias_timer);
+      },
+      removeCountdown: function() {
+
+      },
       previous: function() {
         if (app.current != 1) {
           app.current = app.current - 1
@@ -74,6 +95,11 @@ function render() {
       },
       goTo: function(screen_number) {
         app.current = screen_number
+      },
+      restartGame: function() {
+        app.goTo(1);
+        app.menu = false;
+        app.dias = dias_bolsa;
       }
     },
     updated: function() {
@@ -83,7 +109,13 @@ function render() {
     },
     mounted: function() {
       register_press();
-    }
+      this.startCountdown();
+    },
+    watch: {
+      dias: function(newValue) {
+        TweenLite.to(this.$data, 1, { diasAnimado: newValue });
+      }
+    },
   })
 
 
