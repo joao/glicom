@@ -53,3 +53,10 @@ section {
   height: 100vh;
   width: 100%;
 }
+
+button {
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: white;
+  margin-bottom: 0.5rem;
+}
