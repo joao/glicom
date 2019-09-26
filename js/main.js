@@ -1,8 +1,9 @@
 
 var app;
-var dias_bolsa = 1460
-var dias_timer = 100 // ms
-var dias_subtract = 1
+var dias_bolsa = 1460;
+var dias_timer = 100; // ms
+var dias_subtract = 1;
+var interval;
 
 
 function render() {
@@ -76,7 +77,7 @@ function render() {
           if (app.dias >= 1) {
             app.dias = app.dias - dias_subtract;
           } else {
-            // Show screen that the game is over
+            clearInterval();
           }
         }, dias_timer);
       },
@@ -112,9 +113,9 @@ function render() {
       this.startCountdown();
     },
     watch: {
-      dias: function(newValue) {
-        TweenLite.to(this.$data, 1, { diasAnimado: newValue });
-      }
+      // dias: function(newValue) {
+      //   TweenLite.to(this.$data, 1, { diasAnimado: newValue, ease: Linear.easeNone });
+      // }
     },
   })
 
