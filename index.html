@@ -68,14 +68,24 @@
   
         <div class="buttons">
           <button class="db tl f6" data-key="a" v-on:click="goTo(4)"><span>A</span> Glypican</button>
-          <button class="db tl f6" data-key="b" v-on:click="goTo(5)"><span>B</span> Betaglycan</button>
-          <button class="db tl f6" data-key="c" v-on:click="goTo(6)"><span>C</span> Proteoglycan</button>
-          <button class="db tl f6" data-key="d" v-on:click="goTo(7)"><span>D</span> Versican</button>
+          <button class="db tl f6" data-key="b" v-on:click="goTo(7)"><span>B</span> Betaglycan</button>
+          <button class="db tl f6" data-key="c" v-on:click="goTo(11)"><span>C</span> Proteoglycan</button>
+          <button class="db tl f6" data-key="d" v-on:click="goTo(15)"><span>D</span> Versican</button>
         </div>
       </article>
       </transition>
 
-      <!-- A - Glypican -->
+      <!--
+        A: 3 - completo - falta modals
+        B: 4 - completo - falta modals
+        C: 4 - completo - fata modals
+        D: 1
+
+        - scoring
+      -->
+
+
+      <!-- A - Glypican ----------------------- -->
       <!-- Q1 -->
       <!-- Screen 4 -->
       <transition name="fade">
@@ -92,9 +102,6 @@
           <button class="db" data-key="a" data-truth="V" v-on:click=""><span>A</span> Sim</button>
           <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Não</button>
         </div>
-
-        <div class="modals dn">
-          <div class="modal" data-key="a">
 
       </article>
       </transition>
@@ -142,70 +149,213 @@
       </transition>
 
 
-      <!-- B - Betaglycan -->
+
+
+      <!-- B - Betaglycan ----------------------- -->
       <!-- Q1 -->
       <!-- Screen 7 -->
       <transition name="fade">
       <article id="screen_7" class="screen"  v-if="current_screen == 7">
-        <h1 class="white">7</h1>
+        <div class="box f6">
+         Será que a célula tumoral tem muita proteína?
+        </div>
 
-        <button class="db" data-key="a" v-on:click="goTo(8)">Jogar!</button>
+        <div class="image center">
+          <img src="img/misc/protein_?.png" >
+        </div>
+
+
+        <div class="buttons">
+          <button class="db" data-key="a" data-truth="V" v-on:click=""><span>A</span> Sim</button>
+          <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Não</button>
+        </div>
       </article>
       </transition>
 
+      <!-- Q2 -->
       <!-- Screen 8 -->
       <transition name="fade">
       <article id="screen_8" class="screen"  v-if="current_screen == 8">
-        <h1 class="white">8</h1>
+        <div class="box f6">
+         Vamos comparar com a célula normal. Qual das células vai ter mais proteína?
+        </div>
 
-        <button class="db" data-key="a" v-on:click="goTo(9)">Jogar!</button>
+        <div class="image center">
+          <img src="img/misc/protein_?.png" >
+        </div>
+
+
+        <div class="buttons">
+          <button class="db" data-key="a" data-truth="V" v-on:click=""><span>A</span> Tumoral</button>
+          <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Normal</button>
+        </div>
       </article>
       </transition>
 
+      <!-- Q3 -->
       <!-- Screen 9 -->
       <transition name="fade">
       <article id="screen_9" class="screen"  v-if="current_screen == 9">
-        <h1 class="white">9</h1>
+        <div class="box f6">
+         Foste convidado para ser docente na faculdade. Aceitas o desafio?
+        </div>
 
-        <button class="db" data-key="a" v-on:click="goTo(10)">Jogar!</button>
+        <div class="image center">
+          <img src="img/misc/protein_?.png" >
+        </div>
+
+
+        <div class="buttons">
+          <button class="db" data-key="a" data-truth="V" v-on:click=""><span>A</span> Sim</button>
+          <button class="db" data-key="b" data-truth="V" v-on:click=""><span>B</span> Não</button>
+        </div>
       </article>
       </transition>
 
+      <!-- Q4 -->
       <!-- Screen 10 -->
       <transition name="fade">
       <article id="screen_10" class="screen" v-if="current_screen == 10">
-        <h1 class="white">10</h1>
+        <div class="box f6">
+         Vamos validar no sangue esta hipótese. Será que descobriste o biomarcador?
+        </div>
 
-        <button class="db" data-key="a" v-on:click="goTo(11)">Jogar!</button>
+        <div class="image center">
+          <img src="img/misc/protein_?.png" >
+        </div>
+
+
+        <div class="buttons">
+          <button class="db" data-key="a" data-truth="F" v-on:click=""><span>A</span> Sim</button>
+          <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Não</button>
+        </div>
       </article>
       </transition>
 
+
+
+      <!-- C: Proteoglycan ----------------------- -->
+      <!-- Q1 -->
       <!-- Screen 11 -->
       <transition name="fade">
       <article id="screen_11" class="screen" v-if="current_screen == 11">
-        <h1 class="white">11</h1>
+        <div class="box f6">
+         Será que a célula tumoral tem muita proteína?
+        </div>
 
-        <button class="db" data-key="a" v-on:click="goTo(12)">Jogar!</button>
+        <div class="image center">
+          <img src="img/misc/protein_?.png" >
+        </div>
+
+
+        <div class="buttons">
+          <button class="db" data-key="a" data-truth="V" v-on:click=""><span>A</span> Sim</button>
+          <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Não</button>
+        </div>
       </article>
       </transition>
 
+
+      <!-- Q2 -->
       <!-- Screen 12 -->
       <transition name="fade">
       <article id="screen_12" class="screen" v-if="current_screen == 12">
-        <h1 class="white">12</h1>
+        <div class="box f6">
+         Vamos comparar com a célula normal. Qual das células vai ter mais proteína?
+        </div>
 
-        <button class="db" data-key="a" v-on:click="goTo(13)">Jogar!</button>
+        <div class="image center">
+          <img src="img/misc/protein_?.png" >
+        </div>
+
+
+        <div class="buttons">
+          <button class="db" data-key="a" data-truth="V" v-on:click=""><span>A</span> Tumoral</button>
+          <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Normal</button>
+        </div>
       </article>
       </transition>
 
+      <!-- Q3 -->
       <!-- Screen 13 -->
       <transition name="fade">
       <article id="screen_13" class="screen" v-if="current_screen == 13">
-        <h1 class="white">13</h1>
+        <div class="box f6">
+         Tiveste um convite de última hora para ire de férias. Aceitas?
+        </div>
 
-        <button class="db" data-key="a" v-on:click="goTo(14)">Jogar!</button>
+        <div class="image center">
+          <img src="img/misc/protein_?.png" >
+        </div>
+
+
+        <div class="buttons">
+          <button class="db" data-key="a" data-truth="V" v-on:click=""><span>A</span> Sim</button>
+          <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Não</button>
+        </div>
       </article>
       </transition>
+
+      <!-- Q4 -->
+      <!-- Screen 14 -->
+      <transition name="fade">
+      <article id="screen_14" class="screen" v-if="current_screen == 14">
+        <div class="box f6">
+        Vamos validar no sangue esta hipótese. Será que descobriste o biomarcador?
+        </div>
+
+        <div class="image center">
+          <img src="img/misc/protein_?.png" >
+        </div>
+
+
+        <div class="buttons">
+          <button class="db" data-key="a" data-truth="V" v-on:click=""><span>A</span> Sim</button>
+          <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Não</button>
+        </div>
+      </article>
+      </transition>
+
+
+
+      <!-- D: Proteoglycan ----------------------- -->
+      <!-- Q1 -->
+      <!-- Screen 15 -->
+      <transition name="fade">
+      <article id="screen_15" class="screen" v-if="current_screen == 11">
+        <div class="box f6">
+        Será que a célula tumoral tem muita proteína?
+        </div>
+
+        <div class="image center">
+          <img src="img/misc/protein_?.png" >
+        </div>
+
+
+        <div class="buttons">
+          <button class="db" data-key="a" data-truth="F" v-on:click=""><span>A</span> Sim</button>
+          <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Não</button>
+        </div>
+      </transition>
+
+
+      <!-- Caminho Incorrecto ----------------------- -->
+      
+
+      <!-- Derrota - tempo acabou ----------------------- -->
+
+      
+
+      <!-- Vitória ----------------------- -->
+
+
+
+
+      <!-- Nome ----------------------- -->
+
+
+
+      <!-- Scoreboard ------------------ -->
 
     </section> <!-- / screens -->
 

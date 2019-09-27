@@ -89,6 +89,11 @@ section {
   border: 3px solid #FFF200;
 }
 
+.screen button:hover span {
+  padding: 4px;
+  border: 3px solid #EC008C;
+}
+
 .screen .buttons {
   display: block;
   width: 100%;

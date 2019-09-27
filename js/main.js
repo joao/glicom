@@ -97,13 +97,12 @@ function render() {
         // console.log(event.key);
         if (event.key == 'a') {
           document.querySelectorAll("button[data-key='"+ event.key + "']")[0].click();
-          //app.goTo(2);
         } else if (event.key == 'b') {
-          app.goTo(3);
+          document.querySelectorAll("button[data-key='"+ event.key + "']")[0].click();
         } else if (event.key == 'c') {
-          app.goTo(4)
+          document.querySelectorAll("button[data-key='"+ event.key + "']")[0].click();
         } else if (event.key == 'd') {
-          app.goTo(5)
+          document.querySelectorAll("button[data-key='"+ event.key + "']")[0].click();
         }
       }
     },
