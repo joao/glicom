@@ -34,6 +34,23 @@ section {
   background-position: center bottom;
 }
 
+.screen {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+  padding: 2rem;
+}
+
+.screen button {
+
+}
+
+.screen .buttons {
+
+}
+
+
 #menu {
   height: 100vh;
 }

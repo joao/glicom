@@ -52,12 +52,13 @@
       <!-- Screen 3 -->
       <article id="screen_3" class="screen" v-if="current_screen == 3">
          <h1 class="white">3</h1>
-         <img src="img/screen_start.png">
-
-        <button class="db" data-key="a" v-on:click="goTo(4)">A: Glypican 1</button>
-        <button class="db" data-key="b" v-on:click="goTo(5)">B: Betaglycan</button>
-        <button class="db" data-key="c" v-on:click="goTo(6)">C: Proteoglicano 4</button>
-        <button class="db" data-key="d" v-on:click="goTo(7)">D: Versican</button>
+  
+        <div class="buttons" style="align-self: flex-end;">
+          <button class="db" data-key="a" v-on:click="goTo(4)">A: Glypican 1</button>
+          <button class="db" data-key="b" v-on:click="goTo(5)">B: Betaglycan</button>
+          <button class="db" data-key="c" v-on:click="goTo(6)">C: Proteoglicano 4</button>
+          <button class="db" data-key="d" v-on:click="goTo(7)">D: Versican</button>
+        </div>
       </article>
 
       <!-- Screen 4 -->
@@ -130,7 +131,7 @@
       <article id="screen_13" class="screen" v-if="current_screen == 13">
         <h1 class="white">13</h1>
 
-        <button class="db" data-key="a" v-on:click="restartGame">Jogar!</button>
+        <button class="db" data-key="a" v-on:click="goTo(14)">Jogar!</button>
       </article>
 
     </section> <!-- / screens -->
