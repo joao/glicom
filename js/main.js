@@ -24,7 +24,7 @@ function render() {
     let hammertime = new Hammer(document.querySelector('#app'))
 
     hammertime.get('press').set({
-          time: 1000
+          time: 2000
       });
 
    hammertime.on('press', (e) => {
