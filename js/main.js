@@ -31,7 +31,6 @@ function render() {
     data: {
         screens: screens,
         current_screen: 1,
-        menu: false,
         dias: dias_bolsa,
         diasAnimado: dias_bolsa,
         answers_tried: []
@@ -44,7 +43,8 @@ function render() {
           if (app.dias >= 1) {
             app.dias = app.dias - dias_subtract;
           } else {
-            clearInterval();
+            app.stopCountdown()
+            current_screen = 90
           }
         }, dias_timer);
       },
@@ -87,9 +87,7 @@ function render() {
         console.log(answer_value);
       },
       keyEvent(event) {
-        if (event.key == 'm') {
-          app.menu = true;
-        } else if (event.key == 'r') {
+        if (event.key == 'r') {
           location.reload(); 
         } else if (event.key == 'a') {
           document.querySelectorAll("button[data-key='"+ event.key + "']")[0].click();

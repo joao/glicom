@@ -31,7 +31,7 @@
     
 
     <!-- Static screens -->
-    <section class="static_screens dn" v-if="menu == false">
+    <section class="static_screens dn" v-if="">
 
       <transition name="fade">
       <!-- Screen 1 -->
@@ -360,6 +360,16 @@
       
 
       <!-- Derrota - tempo acabou ----------------------- -->
+      <!-- Screen 15 -->
+      <transition name="fade">
+      <article id="screen_90" class="screen" v-if="current_screen == 90">
+        <div class="box f6">
+        <h1>Derrota! Tempo acabou :(</h1>
+        </div>
+
+
+      </article>
+      </transition>
 
       
 
@@ -400,10 +410,6 @@
 
     </section> <!-- / screens -->
 
-    <section id="menu" class="pa4 bg-light-pink" v-if="menu == true">
-      <h1 class="black">Menu</h1>
-      <button class="db" v-on:click="restartGame">Restart Game</button>
-    </section>
 
   </main>
 
