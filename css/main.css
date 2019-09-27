@@ -42,7 +42,8 @@ section {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  height: 99vh;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   padding: 2rem;
   overflow: hidden;
 }
@@ -76,21 +77,21 @@ div#dias {
 */
 .fade-enter {
   opacity: 0;
-  transform: scale(0.75);
+  transform: scale(0.8);
 }
 
 .fade-enter-to {
   opacity: 1;
-  transition: all .25s;
+  transition: all .15s;
   transform: scale(1);
-  transition-delay: .25s;
+  transition-delay: .15s;
 }
 
 /*.fade-enter, .fade-leave-to */
  .fade-leave-to {
   opacity: 0;
-  transition: all .25s;
-  transform: scale(0.75)
+  transition: all .15s;
+  transform: scale(0.8)
 }
 
 

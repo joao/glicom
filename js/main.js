@@ -5,6 +5,9 @@ var dias_timer = 100; // ms
 var dias_subtract = 1;
 var dias_interval;
 
+/*
+https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+*/
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
@@ -80,8 +83,8 @@ function render() {
         app.current_screen = screen_number
       },
       restartGame: function() {
-        app.goTo(1);
         app.menu = false;
+        app.goTo(1);
         app.dias = dias_bolsa;
       },
       badGameOver: function() {
@@ -128,7 +131,14 @@ function render() {
       document.querySelector('.loading').classList.add('dn')
       document.querySelector('#dias').classList.remove('dn')
       document.querySelector('.static_screens').classList.remove('dn')
-    },
+
+      /* for proper 100vh */
+      window.addEventListener('resize', () => {
+        // We execute the same script as before
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+      });
+    }, // End of mounted
     watch: {
     },
   })
