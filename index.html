@@ -67,19 +67,19 @@
         </div>
   
         <div class="buttons">
-          <button class="db tl f6" data-key="a" v-on:click="goTo(4)"><span>A</span> Glypican</button>
-          <button class="db tl f6" data-key="b" v-on:click="goTo(7)"><span>B</span> Betaglycan</button>
-          <button class="db tl f6" data-key="c" v-on:click="goTo(11)"><span>C</span> Proteoglycan</button>
-          <button class="db tl f6" data-key="d" v-on:click="goTo(15)"><span>D</span> Versican</button>
+          <button class="db f6" data-key="a" v-on:click="goTo(4)"><span>A</span> Glypican</button>
+          <button class="db f6" data-key="b" v-on:click="goTo(7)"><span>B</span> Betaglycan</button>
+          <button class="db f6" data-key="c" v-on:click="goTo(11)"><span>C</span> Proteoglycan</button>
+          <button class="db f6" data-key="d" v-on:click="goTo(15)"><span>D</span> Versican</button>
         </div>
       </article>
       </transition>
 
       <!--
-        A: 3 - completo - falta modals
-        B: 4 - completo - falta modals
-        C: 4 - completo - fata modals
-        D: 1
+        A: 3 - completo - imagens - falta modals
+        B: 4 - completo - falta imagens - falta modals
+        C: 4 - completo - falta imagens - falta modals
+        D: 1 - completo - falta imagens - falta modals
 
         - scoring
       -->
@@ -99,7 +99,7 @@
         </div>
 
         <div class="buttons">
-          <button class="db" data-key="a" data-truth="V" v-on:click=""><span>A</span> Sim</button>
+          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(5)"><span>A</span> Sim</button>
           <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Não</button>
         </div>
 
@@ -116,12 +116,12 @@
         </div>
 
         <div class="image center">
-          <img src="img/misc/protein_b.png" >
+          <img src="img/misc/paper.png" >
         </div>
 
 
         <div class="buttons">
-          <button class="db" data-key="a" data-truth="V" v-on:click=""><span>A</span> Escrever</button>
+          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(6)"><span>A</span> Escrever</button>
           <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Não Escrever</button>
         </div>
       </article>
@@ -136,15 +136,19 @@
          Vamos comparar com a célula normal. Qual das células vai ter mais proteína?
         </div>
 
-        <div class="image center">
-          <img src="img/misc/protein_b.png" >
+      <div class="image center dn">
+
         </div>
 
 
         <div class="buttons">
+
+          <p><img src="img/misc/protein_a.png" /></p>
           <button class="db" data-key="a" data-truth="F" v-on:click=""><span>A</span> Tumoral</button>
+          <p><img src="img/misc/normal_cell.png" /></p>
           <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Normal</button>
         </div>
+
       </article>
       </transition>
 
@@ -161,12 +165,12 @@
         </div>
 
         <div class="image center">
-          <img src="img/misc/protein_?.png" >
+          <img src="img/misc/protein_b.png" >
         </div>
 
 
         <div class="buttons">
-          <button class="db" data-key="a" data-truth="V" v-on:click=""><span>A</span> Sim</button>
+          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(8)"><span>A</span> Sim</button>
           <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Não</button>
         </div>
       </article>
@@ -180,13 +184,14 @@
          Vamos comparar com a célula normal. Qual das células vai ter mais proteína?
         </div>
 
-        <div class="image center">
-          <img src="img/misc/protein_?.png" >
+        <div class="image center dn">
         </div>
 
 
         <div class="buttons">
-          <button class="db" data-key="a" data-truth="V" v-on:click=""><span>A</span> Tumoral</button>
+           <img src="img/misc/protein_b.png" >
+          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(9)"><span>A</span> Tumoral</button>
+           <img src="img/misc/normal_cell.png" >
           <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Normal</button>
         </div>
       </article>
@@ -201,12 +206,12 @@
         </div>
 
         <div class="image center">
-          <img src="img/misc/protein_?.png" >
+          <img src="img/misc/school.png" >
         </div>
 
 
         <div class="buttons">
-          <button class="db" data-key="a" data-truth="V" v-on:click=""><span>A</span> Sim</button>
+          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(10)"><span>A</span> Sim</button>
           <button class="db" data-key="b" data-truth="V" v-on:click=""><span>B</span> Não</button>
         </div>
       </article>
@@ -217,7 +222,7 @@
       <transition name="fade">
       <article id="screen_10" class="screen" v-if="current_screen == 10">
         <div class="box f6">
-         Vamos validar no sangue esta hipótese. Será que descobriste o biomarcador?
+         Vamos validar no sangue uma hipótese. Será que descobriste o biomarcador?
         </div>
 
         <div class="image center">
