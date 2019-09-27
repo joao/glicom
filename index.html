@@ -34,6 +34,7 @@
     <!-- Static screens -->
     <section class="static_screens dn" v-if="menu == false">
 
+      <transition name="fade">
       <!-- Screen 1 -->
       <article id="screen_1" class="screen" v-if="current_screen == 1">
         <h1 class="white">1</h1>
@@ -41,19 +42,22 @@
         <button class="db" data-key="a" v-on:click="goTo(2)">Jogar</button>
 
       </article>
+      </transition>
 
       <!-- Screen 2 -->
+      <transition name="fade">
       <article id="screen_2" class="screen" v-if="current_screen == 2">
         <h1 class="white">2</h1>
 
         <button class="db" data-key="a" v-on:click="goTo(3)">Jogar!</button>
       </article>
+      </transition>
 
       <!-- Screen 3 -->
       <article id="screen_3" class="screen" v-if="current_screen == 3">
          <h1 class="white">3</h1>
   
-        <div class="buttons" style="align-self: flex-end;">
+        <div class="buttons">
           <button class="db" data-key="a" v-on:click="goTo(4)">A: Glypican 1</button>
           <button class="db" data-key="b" v-on:click="goTo(5)">B: Betaglycan</button>
           <button class="db" data-key="c" v-on:click="goTo(6)">C: Proteoglicano 4</button>
