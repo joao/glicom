@@ -138,6 +138,11 @@ section {
   background-position: center bottom;
 }
 
+#screen_90 img {
+  width: 50%;
+  height: auto;
+}
+
 
 .about p span {
   background-color: yellow;

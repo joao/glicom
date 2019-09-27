@@ -364,9 +364,17 @@
       <transition name="fade">
       <article id="screen_90" class="screen" v-if="current_screen == 90">
         <div class="box f6">
-        <h1>Derrota! Tempo acabou :(</h1>
+          <h1>Não!</h1>
+          <p>Não concluiste a tua pesquisa a tempo e terminou a bolsa… O mundo jamais saberá para que serve um biomarcador…
         </div>
 
+        <div class="image center">
+          <img src="img/misc/fail.png" >
+        </div>
+
+        <div class="buttons">
+          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(1)"><span>A</span> Reiniciar</button>
+        </div>
 
       </article>
       </transition>

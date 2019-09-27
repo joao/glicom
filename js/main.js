@@ -44,7 +44,7 @@ function render() {
             app.dias = app.dias - dias_subtract;
           } else {
             app.stopCountdown()
-            current_screen = 90
+            app.current_screen = 90
           }
         }, dias_timer);
       },
@@ -87,7 +87,10 @@ function render() {
         console.log(answer_value);
       },
       keyEvent(event) {
-        if (event.key == 'r') {
+        if (event.key == 'f') {
+          app.current_screen = 90
+        }
+        else if (event.key == 'r') {
           location.reload(); 
         } else if (event.key == 'a') {
           document.querySelectorAll("button[data-key='"+ event.key + "']")[0].click();
