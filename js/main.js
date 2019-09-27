@@ -99,6 +99,14 @@ function render() {
           app.doublefail_trials = 0;
         }
 
+        if (screen_number == 91) {
+          app.stopCountdown();
+        }
+
+        if (screen_number == 1) {
+           document.querySelector('#dias').classList.add('dn')
+        }
+
         console.log(app.doublefail_trials);
         //console.log(screen_number);
       },
