@@ -7,7 +7,7 @@ var dias_interval;
 var previous_screen;
 var next_screen;
 var message = ""
-var doublefail_trials;
+// var doublefail_trials = 0;
 
 /*
 https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
@@ -36,7 +36,7 @@ function render() {
         current_screen: 1,
         dias: dias_bolsa,
         diasAnimado: dias_bolsa,
-        answers_tried: []
+        doublefail_trials: 0
     },
     computed: {
     },
@@ -79,7 +79,7 @@ function render() {
 
           // Dupla resposta errada
           if (doublefail) {
-            if (app.doublefail_trials >= 2) {
+            if (app.doublefail_trials == 1) {
               app.goTo(53)
             }
             app.doublefail_trials = app.doublefail_trials + 1
@@ -89,13 +89,18 @@ function render() {
           app.message = message;
           app.next_screen = next_screen;
         } else {
-          //app.doublefail_trials = null;
+          //app.doublefail_trials = 0;
           app.message = null;
           app.next_screen = null;
           app.previous_screen = null
         }
 
-        console.log(screen_number);
+        if (screen_number == 3) {
+          app.doublefail_trials = 0;
+        }
+
+        console.log(app.doublefail_trials);
+        //console.log(screen_number);
       },
       restartGame: function() {
         app.menu = false;
