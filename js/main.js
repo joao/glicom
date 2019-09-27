@@ -4,6 +4,7 @@ var dias_bolsa = 1460;
 var dias_timer = 100; // ms
 var dias_subtract = 1;
 var dias_interval;
+var answers_tried ;
 
 /*
 https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
@@ -17,10 +18,10 @@ function render() {
 
 
 
- // // Modal component
- //  Vue.component('screen', {
- //    template: '#component-screen',
- //  })
+  // Modal component
+  Vue.component('modal', {
+    template: '#modal',
+  })
 
 
   /* Vue app
@@ -32,7 +33,8 @@ function render() {
         current_screen: 1,
         menu: false,
         dias: dias_bolsa,
-        diasAnimado: dias_bolsa
+        diasAnimado: dias_bolsa,
+        answers_tried: []
     },
     computed: {
     },
@@ -61,11 +63,13 @@ function render() {
       },
       goTo: function(screen_number) {
         app.current_screen = screen_number
+        //app.answers_tried = [] // reset answers tried
         if (screen_number == 3) { // Starts game
           document.querySelector('#dias').classList.remove('dn')
           app.startCountdown();
 
         }
+        console.log(screen_number);
       },
       restartGame: function() {
         app.menu = false;
@@ -78,8 +82,9 @@ function render() {
       successGameOver: function() {
       
       },
-      checkAnswer() {
-
+      checkAnswer(event) {
+        answer_value = event.target.getAttribute('data-truth');
+        console.log(answer_value);
       },
       keyEvent(event) {
         if (event.key == 'm') {
@@ -108,15 +113,7 @@ function render() {
       // a = 65; b = 66; c = 67; d = 68)
       window.addEventListener('keydown', function(event) {
         app.keyEvent(event)
-        // if (event.key == 'a') {
-        //   app.goTo(2);
-        // } else if (event.key == 'b') {
-        //   app.goTo(3);
-        // } else if (event.key == 'c') {
-        //   app.goTo(4)
-        // } else if (event.key == 'd') {
-        //   app.goTo(5)
-        // }
+  
        });
       /* Loading... */
       document.querySelector('.loading').classList.add('dn')

@@ -40,6 +40,7 @@
 
         <div class="buttons">
           <button class="db f6" data-key="a" v-on:click="goTo(2)"><span>A</span> Jogar</button>
+          <button class="db f6" data-key="b" v-on:click="goTo(100)"><span>B</span> Sobre</button>
         </div>
       </article>
       </transition>
@@ -98,12 +99,15 @@
         </div>
 
         <div class="buttons">
-          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(5)"><span>A</span> Sim</button>
-          <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Não</button>
+          <button class="db" data-key="a" data-truth="V" v-on:click="checkAnswer(event)"><span>A</span> Sim</button>
+          <button class="db" data-key="b" data-truth="F" v-on:click="checkAnswer(event)"><span>B</span> Não</button>
         </div>
 
       </article>
       </transition>
+
+
+      <!-- Screen 4 - Success -->
 
 
       <!-- Q2 -->
@@ -342,7 +346,14 @@
           <button class="db" data-key="a" data-truth="F" v-on:click=""><span>A</span> Sim</button>
           <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Não</button>
         </div>
+      </article>
       </transition>
+
+
+      <!-- Certo -->
+
+
+      <!-- Errado -->
 
 
       <!-- Caminho Incorrecto ----------------------- -->
@@ -363,6 +374,30 @@
 
       <!-- Scoreboard ------------------ -->
 
+
+      <!-- About ------------------------- -->
+      <!-- Screen 100 -->
+      <transition name="fade">
+      <article id="screen_100" class="screen" v-if="current_screen == 100">
+        <div class="box f6 about">
+          <h1>GLICOM</h1>
+          <p>Este jogo interactivo foi elaborado no contexto do <a href="http://uporto.emergencehackathon.com" target="_blank">Emergence@UPorto - “Digital Media for Science Communication Hackaton”</a>, em Setembro/2019</p>
+
+          <p>Equipa:<br><span>Ana Laranja</span>, Comunicadora de Ciência<br>
+          <span>Dan Martini</span>, Criativo<br>
+          <span>João Antunes</span>, Developer<br>
+          <span>João Pedro Ribeiro</span>, Criativo<br>
+          <span>Juliana Poças</span>, Cientista<br>
+          </p>
+
+        </div>
+
+        <div class="buttons">
+          <button class="db" data-key="a" data-truth="" v-on:click="goTo(1)"><span>A</span> Voltar</button>
+        </div>
+      </article>
+      </transition>
+
     </section> <!-- / screens -->
 
     <section id="menu" class="pa4 bg-light-pink" v-if="menu == true">
@@ -373,7 +408,22 @@
   </main>
 
 
+<script type="text/x-template" id="modal">
+  <div class="modal-mask">
+      <div class="modal-wrapper">
+        <div class="modal-container br2 ba b--black-50">
 
+          <div class="modal-content">
+            <slot name="content">
+         
+            </slot>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+</script>
 
 
 

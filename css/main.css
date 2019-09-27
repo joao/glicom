@@ -139,8 +139,9 @@ section {
 }
 
 
-
-
+.about p span {
+  background-color: yellow;
+}
 
 
 
