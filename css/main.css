@@ -9,17 +9,19 @@ html {
 
 body {
   font-family: 'Press Start 2P', Courier, monospace;
+  overflow-y: scroll;
 }
 
 html, body {
-  overflow: hidden;
+/*  overflow: hidden;*/
 }
 
 main {
   height: 100%;
   width: 100%;
   position: relative;
-  overflow: hidden;
+  overflow-y: scroll;
+/*  overflow: hidden;*/
 }
 
 
@@ -29,18 +31,7 @@ section {
 }
 
 
-section {
-}
 
-.screen2 {
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  background-image: url('../img/background.png');
-  background-repeat: none;
-  background-size: 100%;
-  background-position: center bottom;
-}
 
 /* Screens
 ------------------------------------- */
