@@ -38,6 +38,16 @@ section {
   background-position: center bottom;
 }
 
+/* Screens
+------------------------------------- */
+ 
+.static_screens {
+  background-image: url('../img/background.png');
+  background-repeat: none;
+  background-size: 100%;
+  background-position: center bottom;
+}
+
 .screen {
   display: flex;
   justify-content: space-between;
@@ -46,15 +56,47 @@ section {
   height: calc(var(--vh, 1vh) * 100);
   padding: 2rem;
   overflow: hidden;
+
 }
 
 .screen button {
+  background-color: #EC008C;
+  border: 0;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid #2E3192;
+  border-right: 4px solid #2E3192;
+  border-bottom: 8px solid #2E3192;
+  color: #FFF200;
+}
 
+.screen button:hover {
+  background-color: #FFF200;
+  color: #EC008C;
+  border-bottom: 4px solid #2E3192;
+}
+
+.screen button.active {
+  background-color: #FFF200;
 }
 
 .screen .buttons {
 
 }
+
+#screen_1 {
+  background-image: url('../img/screens/screen_1.png');
+  background-repeat: none;
+  background-size: 100%;
+  background-position: center bottom;
+}
+
+
+
+
+
+
 
 
 #menu {
@@ -95,12 +137,7 @@ div#dias {
 }
 
 
-button {
-  padding: 0.5rem;
-  border-radius: 5px;
-  background-color: white;
-  margin-bottom: 0.5rem;
-}
+
 
 .clicker {
   z-index: 100;
