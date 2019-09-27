@@ -40,7 +40,7 @@
         <div></div>
 
         <div class="buttons">
-          <button class="db" data-key="a" v-on:click="goTo(2)">Jogar</button>
+          <button class="db f6" data-key="a" v-on:click="goTo(2)">Jogar</button>
         </div>
       </article>
       </transition>
@@ -48,12 +48,13 @@
       <!-- Screen 2 -->
       <transition name="fade">
       <article id="screen_2" class="screen" v-if="current_screen == 2">
-        <div class="box">
+        <div class="box f6">
           Parabéns, acabaste de receber uma bolsa de investigação de 3 anos! Tens 1460 dias para descobrir a proteína correta para identificar cancro nas células. Boa sorte!
         </div>
+  
 
         <div class="buttons">
-          <button class="db" data-key="a" v-on:click="goTo(3)">Jogar!</button>
+          <button class="db f6" data-key="a" v-on:click="goTo(3)">Jogar!</button>
         </div>
       </article>
       </transition>
@@ -61,13 +62,15 @@
       <!-- Screen 3 -->
       <transition name="fade">
       <article id="screen_3" class="screen" v-if="current_screen == 3">
-         <h1 class="white">3</h1>
+         <div class="box f6">
+          Este thriller científico compara células normais das tumorais, com o objetivo de encontrar o indicador do estado de doença do paciente — o BIOMARCADOR. Escolhe uma das 4 Proteínas. Boa sorte!
+        </div>
   
         <div class="buttons">
-          <button class="db tl" data-key="a" v-on:click="goTo(1)"><span>A</span> Glypican</button>
-          <button class="db tl" data-key="b" v-on:click="goTo(5)"><span>B</span> Betaglycan</button>
-          <button class="db tl" data-key="c" v-on:click="goTo(6)"><span>C</span> Proteoglycan</button>
-          <button class="db tl" data-key="d" v-on:click="goTo(7)"><span>D</span> Versican</button>
+          <button class="db tl f6" data-key="a" v-on:click="goTo(1)"><span>A</span> Glypican</button>
+          <button class="db tl f6" data-key="b" v-on:click="goTo(5)"><span>B</span> Betaglycan</button>
+          <button class="db tl f6" data-key="c" v-on:click="goTo(6)"><span>C</span> Proteoglycan</button>
+          <button class="db tl f6" data-key="d" v-on:click="goTo(7)"><span>D</span> Versican</button>
         </div>
       </article>
       </transition>

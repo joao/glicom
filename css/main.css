@@ -66,10 +66,11 @@ section {
 }
 
 .screen .box {
+  margin-top: 1rem;
   padding: 2rem;
-  background-image: url('../img/background_txt.png');
+  background-image: url('../img/misc/background_txt.png');
   background-repeat: none;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .screen button {
@@ -78,8 +79,8 @@ section {
   padding: 0.5rem;
   border-radius: 5px;
   margin-bottom: 0.5rem;
-  border-left: 4px solid #2E3192;
-  border-right: 4px solid #2E3192;
+  border-left: 5px solid #2E3192;
+  border-right: 5px solid #2E3192;
   border-bottom: 8px solid #2E3192;
   color: #FFF200;
   width: 100%;
@@ -110,11 +111,17 @@ section {
 
 #screen_1 {
   background-image: url('../img/screens/screen_1.png');
-  background-repeat: none;
+  background-repeat: no-repeat;
   background-size: 100%;
   background-position: center top;
 }
 
+#screen_2 {
+  background-image: url('../img/screens/screen_2.png');
+  background-repeat: no-repeat;
+  background-size: auto 40%;
+  background-position: center bottom;
+}
 
 
 
