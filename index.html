@@ -99,8 +99,8 @@
         </div>
 
         <div class="buttons">
-          <button class="db" data-key="a" data-truth="V" v-on:click="checkAnswer(event)"><span>A</span> Sim</button>
-          <button class="db" data-key="b" data-truth="F" v-on:click="checkAnswer(event)"><span>B</span> Não</button>
+          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(51, 4, 5)"><span>A</span> Sim</button>
+          <button class="db" data-key="b" data-truth="F" v-on:click="goTo(52, 4, 4)"><span>B</span> Não</button>
         </div>
 
       </article>
@@ -351,12 +351,64 @@
 
 
       <!-- Certo -->
+      <transition name="fade">
+      <article id="screen_51" class="screen" v-if="current_screen == 51">
+        <div class="box f6">
+          <h1>Certo!</h1>
 
+  
+        </div>
+
+        <div class="image center">
+          <img src="img/misc/win.png" >
+        </div>
+
+        <div class="buttons">
+          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(1)"><span>A</span> Avançar</button>
+        </div>
+
+      </article>
+      </transition>
 
       <!-- Errado -->
+      <transition name="fade">
+      <article id="screen_52" class="screen" v-if="current_screen == 52">
+        <div class="box f6">
+          <h1>Errado!</h1>
+          <p>Perdeste <span></span>
+        </div>
+
+        <div class="image center">
+          <img src="img/misc/fail.png" >
+        </div>
+
+        <div class="buttons">
+          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(1)"><span>A</span> Tentar de novo</button>
+        </div>
+
+      </article>
+      </transition>
 
 
       <!-- Caminho Incorrecto ----------------------- -->
+      <transition name="fade">
+      <article id="screen_52" class="screen" v-if="current_screen == 52">
+        <div class="box f6">
+          <h1>Afinal não era esta proteína!</h1>
+          <p>Escolher outra.</p> 
+
+        </div>
+
+        <div class="image center dn">
+          <img src="img/misc/fail.png" >
+        </div>
+
+        <div class="buttons">
+          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(3)"><span>A</span> Escolher proteína</button>
+        </div>
+
+      </article>
+      </transition>
       
 
       <!-- Derrota - tempo acabou ----------------------- -->
@@ -365,7 +417,7 @@
       <article id="screen_90" class="screen" v-if="current_screen == 90">
         <div class="box f6">
           <h1>Não!</h1>
-          <p>Não concluiste a tua pesquisa a tempo e terminou a bolsa… O mundo jamais saberá para que serve um biomarcador…
+          <p>Não concluiste a tua pesquisa a tempo e terminou a bolsa… O mundo jamais saberá para que serve um biomarcador…</p>
         </div>
 
         <div class="image center">
@@ -381,12 +433,27 @@
 
       
 
-      <!-- Vitória ----------------------- -->
+      <!-- Vitoria ----------------------- -->
+      <transition name="fade">
+      <article id="screen_91" class="screen" v-if="current_screen == 91">
+        <div class="box f6">
+          <h1>Vitória!</h1>
+          <p>Biomarcadores são o futuro da humanidade e tu conquistaste glória eterna. Ganhaste fama e muito, mas muito dinheiro!</p>
+        </div>
+
+        <div class="image center">
+          <img src="img/misc/champion.png" >
+        </div>
+
+        <div class="buttons">
+          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(1)"><span>A</span> Reiniciar</button>
+        </div>
+
+      </article>
+      </transition>
 
 
 
-
-      <!-- Nome ----------------------- -->
 
 
 
@@ -422,22 +489,6 @@
   </main>
 
 
-<script type="text/x-template" id="modal">
-  <div class="modal-mask">
-      <div class="modal-wrapper">
-        <div class="modal-container br2 ba b--black-50">
-
-          <div class="modal-content">
-            <slot name="content">
-         
-            </slot>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-</script>
 
 
 

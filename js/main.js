@@ -4,7 +4,7 @@ var dias_bolsa = 1460;
 var dias_timer = 100; // ms
 var dias_subtract = 1;
 var dias_interval;
-var answers_tried ;
+var answers_tried;
 
 /*
 https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
@@ -61,12 +61,16 @@ function render() {
           app.current_screen = app.current_screen + 1
         }
       },
-      goTo: function(screen_number) {
+      goTo: function(screen_number, previous_screen, next_screen) {
         app.current_screen = screen_number
-        //app.answers_tried = [] // reset answers tried
+
         if (screen_number == 3) { // Starts game
           document.querySelector('#dias').classList.remove('dn')
           app.startCountdown();
+        }
+
+        // Answers check
+        if (previous_screen) {
 
         }
         console.log(screen_number);

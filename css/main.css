@@ -138,7 +138,8 @@ section {
   background-position: center bottom;
 }
 
-#screen_90 img {
+#screen_90 img,
+#screen_91 img {
   width: 50%;
   height: auto;
 }
