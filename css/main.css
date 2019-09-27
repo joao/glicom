@@ -151,7 +151,7 @@ section {
 /* Counter */
 div#dias {
   position: fixed;
-  top: 2rem;
+  top: 1.6rem;
   right: 1rem;
   z-index: 20;
 }

@@ -15,26 +15,6 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 function render() {
 
 
-  /* Hammer
-  --------------------------------------------- */
-
-  // Swipes + long press
-  function register_press() {
-
-    let hammertime = new Hammer(document.querySelector('#app'))
-
-    hammertime.get('press').set({
-          time: 2000
-      });
-
-   hammertime.on('press', (e) => {
-      if (app.menu != true) {
-        app.menu = true
-      }
-    })
-  }
-
-
 
 
  // // Modal component
@@ -81,6 +61,11 @@ function render() {
       },
       goTo: function(screen_number) {
         app.current_screen = screen_number
+        if (screen_number == 3) { // Starts game
+          document.querySelector('#dias').classList.remove('dn')
+          app.startCountdown();
+
+        }
       },
       restartGame: function() {
         app.menu = false;
@@ -93,9 +78,15 @@ function render() {
       successGameOver: function() {
       
       },
+      checkAnswer() {
+
+      },
       keyEvent(event) {
-        // console.log(event.key);
-        if (event.key == 'a') {
+        if (event.key == 'm') {
+          app.menu = true;
+        } else if (event.key == 'r') {
+          location.reload(); 
+        } else if (event.key == 'a') {
           document.querySelectorAll("button[data-key='"+ event.key + "']")[0].click();
         } else if (event.key == 'b') {
           document.querySelectorAll("button[data-key='"+ event.key + "']")[0].click();
@@ -108,12 +99,12 @@ function render() {
     },
     updated: function() {
       if (!app.menu) {
-        register_press();
+        //register_press();
       }
     },
     mounted: function() {
-      register_press();
-      this.startCountdown();
+      //register_press();
+      //this.startCountdown();
       // a = 65; b = 66; c = 67; d = 68)
       window.addEventListener('keydown', function(event) {
         app.keyEvent(event)
@@ -129,7 +120,6 @@ function render() {
        });
       /* Loading... */
       document.querySelector('.loading').classList.add('dn')
-      document.querySelector('#dias').classList.remove('dn')
       document.querySelector('.static_screens').classList.remove('dn')
 
       /* for proper 100vh */
