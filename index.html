@@ -39,8 +39,9 @@
       <article id="screen_1" class="screen" v-if="current_screen == 1">
         <div></div>
 
-
-        <button class="db tl" data-key="a" v-on:click="goTo(2)">Jogar</button>
+        <div class="buttons">
+          <button class="db" data-key="a" v-on:click="goTo(2)">Jogar</button>
+        </div>
       </article>
       </transition>
 
@@ -49,7 +50,9 @@
       <article id="screen_2" class="screen" v-if="current_screen == 2">
         <h1 class="white">2</h1>
 
-        <button class="db" data-key="a" v-on:click="goTo(3)">Jogar!</button>
+        <div class="buttons">
+          <button class="db" data-key="a" v-on:click="goTo(3)">Jogar!</button>
+        </div>
       </article>
       </transition>
 
@@ -59,10 +62,10 @@
          <h1 class="white">3</h1>
   
         <div class="buttons">
-          <button class="db" data-key="a" v-on:click="goTo(1)">A: Glypican 1</button>
-          <button class="db" data-key="b" v-on:click="goTo(5)">B: Betaglycan</button>
-          <button class="db" data-key="c" v-on:click="goTo(6)">C: Proteoglicano 4</button>
-          <button class="db" data-key="d" v-on:click="goTo(7)">D: Versican</button>
+          <button class="db tl" data-key="a" v-on:click="goTo(1)"><span>A</span> Glypican</button>
+          <button class="db tl" data-key="b" v-on:click="goTo(5)"><span>B</span> Betaglycan</button>
+          <button class="db tl" data-key="c" v-on:click="goTo(6)"><span>C</span> Proteoglycan</button>
+          <button class="db tl" data-key="d" v-on:click="goTo(7)"><span>D</span> Versican</button>
         </div>
       </article>
       </transition>
