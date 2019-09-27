@@ -109,6 +109,10 @@ section {
   width: 100%;
 }
 
+.screen image img {
+  max-width: 50%;
+}
+
 #screen_1 {
   background-image: url('../img/screens/screen_1.png');
   background-repeat: no-repeat;

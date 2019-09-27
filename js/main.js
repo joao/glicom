@@ -96,7 +96,7 @@ function render() {
       keyEvent(event) {
         // console.log(event.key);
         if (event.key == 'a') {
-          document.querySelectorAll("[data-key='"+ event.key + "']")[0].click();
+          document.querySelectorAll("button[data-key='"+ event.key + "']")[0].click();
           //app.goTo(2);
         } else if (event.key == 'b') {
           app.goTo(3);
@@ -128,6 +128,7 @@ function render() {
         //   app.goTo(5)
         // }
        });
+      /* Loading... */
       document.querySelector('.loading').classList.add('dn')
       document.querySelector('#dias').classList.remove('dn')
       document.querySelector('.static_screens').classList.remove('dn')

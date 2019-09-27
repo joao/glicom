@@ -40,7 +40,7 @@
         <div></div>
 
         <div class="buttons">
-          <button class="db f6" data-key="a" v-on:click="goTo(2)">Jogar</button>
+          <button class="db f6" data-key="a" v-on:click="goTo(2)"><span>A</span> Jogar</button>
         </div>
       </article>
       </transition>
@@ -54,7 +54,7 @@
   
 
         <div class="buttons">
-          <button class="db f6" data-key="a" v-on:click="goTo(3)">Jogar!</button>
+          <button class="db f6" data-key="a" v-on:click="goTo(3)"><span>A</span> Jogar!</button>
         </div>
       </article>
       </transition>
@@ -67,7 +67,7 @@
         </div>
   
         <div class="buttons">
-          <button class="db tl f6" data-key="a" v-on:click="goTo(1)"><span>A</span> Glypican</button>
+          <button class="db tl f6" data-key="a" v-on:click="goTo(4)"><span>A</span> Glypican</button>
           <button class="db tl f6" data-key="b" v-on:click="goTo(5)"><span>B</span> Betaglycan</button>
           <button class="db tl f6" data-key="c" v-on:click="goTo(6)"><span>C</span> Proteoglycan</button>
           <button class="db tl f6" data-key="d" v-on:click="goTo(7)"><span>D</span> Versican</button>
@@ -75,35 +75,75 @@
       </article>
       </transition>
 
+      <!-- A - Glypican -->
+      <!-- Q1 -->
       <!-- Screen 4 -->
       <transition name="fade">
       <article id="screen_4" class="screen" v-if="current_screen == 4">
-        <h1 class="white">4</h1>
+        <div class="box f6">
+         Será que a célula temoral tem muita proteína?
+        </div>
 
-        <button class="db" data-key="a" v-on:click="goTo(5)">Jogar!</button>
+        <div class="image center">
+          <img src="img/misc/protein_a.png" >
+        </div>
+
+        <div class="buttons">
+          <button class="db" data-key="a" data-truth="V" v-on:click=""><span>A</span> Sim</button>
+          <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Não</button>
+        </div>
+
+        <div class="modals">
+          <div class="modal" data-key="a">
+
       </article>
       </transition>
 
 
+      <!-- Q2 -->
       <!-- Screen 5 -->
       <transition name="fade">
       <article id="screen_5" class="screen"  v-if="current_screen == 5">
-        <h1 class="white">5</h1>
+        <div class="box f6">
+         Vais ter de submeter um projeto para um congresso. Vais escrever ou não?
+        </div>
 
-        <button class="db" data-key="a" v-on:click="goTo(6)">Jogar!</button>
+        <div class="image center">
+          <img src="img/misc/protein_b.png" >
+        </div>
+
+
+        <div class="buttons">
+          <button class="db" data-key="a" data-truth="V" v-on:click=""><span>A</span> Escrever</button>
+          <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Não Escrever</button>
+        </div>
       </article>
       </transition>
 
 
+      <!-- Q3 -->
       <!-- Screen 6 -->
       <transition name="fade">
       <article id="screen_6" class="screen"  v-if="current_screen == 6">
-        <h1 class="white">6</h1>
+        <div class="box f6">
+         Vamos comparar com a célula normal. Qual das células vai ter mais proteína?
+        </div>
 
-        <button class="db" data-key="a" v-on:click="goTo(7)">Jogar!</button>
+        <div class="image center">
+          <img src="img/misc/protein_b.png" >
+        </div>
+
+
+        <div class="buttons">
+          <button class="db" data-key="a" data-truth="F" v-on:click=""><span>A</span> Tumoral</button>
+          <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Normal</button>
+        </div>
       </article>
       </transition>
 
+
+      <!-- B - Betaglycan -->
+      <!-- Q1 -->
       <!-- Screen 7 -->
       <transition name="fade">
       <article id="screen_7" class="screen"  v-if="current_screen == 7">
