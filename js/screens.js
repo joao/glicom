@@ -1,21 +1,21 @@
 var screens = [
   {
     "id": 1,
-    "bg_color": "#D53738",
-    "type": "image",
-    "text": "Start",
-    "questions": true
+    "type": "story",
+    "text": false,
+    "image": "img/screen_start.png",
+    "button": "Start",
   },
   {
     "id": 2,
-    "bg_color": "#638867",
-    "text": "Proteína",
-    "type": "question",
-    "questions": false
+    "type": "story",
+    "text": "Parabéns, acabaste de receber uma bolsa de investigação de 3 anos!<br><br>Tens 1460 dias para descobrires a proteína correta para identificar cancro nas células.<br><br>Boa sorte!",
+    "image": "img/",
+    "button": "Jogar"
   },
   {
     "id": 3,
-    "bg_color": "#FAF429",
+    "type": "question",
     "text": "Célula",
     "type": "text"
   },

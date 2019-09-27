@@ -20,49 +20,131 @@
 
   <main id="app" class="">
 
+    <!-- Loading -->
+    <div class="loading">
+      <h1 class="white tc">Loading...</h1>
+    </div>
+
     <!-- Dias counter -->
-    <div v-model="dias" id="dias" class="yellow">
+    <div v-model="dias" id="dias" class="yellow dn">
       {{ dias }} dias
     </div>
     
-    <section class="screen pa4" v-for="screen in screens"
-            :key="screen.id"
-            :style="{ }"
-            v-if="current == screen.id && menu == false"
-            :class="'screen_' + screen.id">
+
+    <!-- Static screens -->
+    <section class="static_screens dn" v-if="menu == false">
+
+      <!-- Screen 1 -->
+      <article id="screen_1" class="screen" v-if="current_screen == 1">
+        <h1 class="white">1</h1>
+
+        <button class="db" data-key="a" v-on:click="goTo(2)">Jogar</button>
+
+      </article>
+
+      <!-- Screen 2 -->
+      <article id="screen_2" class="screen" v-if="current_screen == 2">
+        <h1 class="white">2</h1>
+
+        <button class="db" data-key="a" v-on:click="goTo(3)">Jogar!</button>
+      </article>
+
+      <!-- Screen 3 -->
+      <article id="screen_3" class="screen" v-if="current_screen == 3">
+         <h1 class="white">3</h1>
+         <img src="img/screen_start.png">
+
+        <button class="db" data-key="a" v-on:click="goTo(4)">A: Glypican 1</button>
+        <button class="db" data-key="b" v-on:click="goTo(5)">B: Betaglycan</button>
+        <button class="db" data-key="c" v-on:click="goTo(6)">C: Proteoglicano 4</button>
+        <button class="db" data-key="d" v-on:click="goTo(7)">D: Versican</button>
+      </article>
+
+      <!-- Screen 4 -->
+      <article id="screen_4" class="screen" v-if="current_screen == 4">
+        <h1 class="white">4</h1>
+
+        <button class="db" data-key="a" v-on:click="goTo(5)">Jogar!</button>
+      </article>
 
 
-            <!-- Screen content -->
-            <h1 class="white">{{ screen.text }}</h1>
-            <h3 class="dn">{{ screen.type }}</h3>
-            <div v-if="screen.questions">
-              <button class="db" v-on:click="goTo(2)">A: Protéina</button>
-              <button class="db" v-on:click="goTo(3)">B: Célula</button>
-              <button class="db" v-on:click="goTo(4)">C: ADN</button>
-              <button class="db" v-on:click="goTo(5)">D: Sangue</button>
-            </div>
+      <!-- Screen 5 -->
+      <article id="screen_5" class="screen"  v-if="current_screen == 5">
+        <h1 class="white">5</h1>
 
-            <!-- Debug: restart -->
-            <div v-if="screen.id != 1">
-              <button class="db" v-on:click="goTo(1)">Start Again</button>
-            </div>
+        <button class="db" data-key="a" v-on:click="goTo(6)">Jogar!</button>
+      </article>
 
-            <!-- Option Modals -->
 
-            <!-- Clicker -->
-            <div class="clicker dn">
-              <div class="left" v-on:click="previous">
-              </div>
-              <div class="right"  v-on:click="next">
-              </div>
-            </div>
-    </section>
+      <!-- Screen 6 -->
+      <article id="screen_6" class="screen"  v-if="current_screen == 6">
+        <h1 class="white">6</h1>
+
+        <button class="db" data-key="a" v-on:click="goTo(7)">Jogar!</button>
+      </article>
+
+      <!-- Screen 7 -->
+      <article id="screen_7" class="screen"  v-if="current_screen == 7">
+        <h1 class="white">7</h1>
+
+        <button class="db" data-key="a" v-on:click="goTo(8)">Jogar!</button>
+      </article>
+
+      <!-- Screen 8 -->
+      <article id="screen_8" class="screen"  v-if="current_screen == 8">
+        <h1 class="white">8</h1>
+
+        <button class="db" data-key="a" v-on:click="goTo(9)">Jogar!</button>
+      </article>
+
+      <!-- Screen 9 -->
+      <article id="screen_9" class="screen"  v-if="current_screen == 9">
+        <h1 class="white">9</h1>
+
+        <button class="db" data-key="a" v-on:click="goTo(10)">Jogar!</button>
+      </article>
+
+      <!-- Screen 10 -->
+      <article id="screen_10" class="screen" v-if="current_screen == 10">
+        <h1 class="white">10</h1>
+
+        <button class="db" data-key="a" v-on:click="goTo(11)">Jogar!</button>
+      </article>
+
+      <!-- Screen 11 -->
+      <article id="screen_11" class="screen" v-if="current_screen == 11">
+        <h1 class="white">11</h1>
+
+        <button class="db" data-key="a" v-on:click="goTo(12)">Jogar!</button>
+      </article>
+
+      <!-- Screen 12 -->
+      <article id="screen_12" class="screen" v-if="current_screen == 12">
+        <h1 class="white">12</h1>
+
+        <button class="db" data-key="a" v-on:click="goTo(13)">Jogar!</button>
+      </article>
+
+
+      <!-- Screen 13 -->
+      <article id="screen_13" class="screen" v-if="current_screen == 13">
+        <h1 class="white">13</h1>
+
+        <button class="db" data-key="a" v-on:click="restartGame">Jogar!</button>
+      </article>
+
+    </section> <!-- / screens -->
 
     <section id="menu" class="pa4 bg-light-pink" v-if="menu == true">
       <h1 class="black">Menu</h1>
       <button class="db" v-on:click="restartGame">Restart Game</button>
     </section>
+
   </main>
+
+
+
+
 
 
   <script type="text/javascript">

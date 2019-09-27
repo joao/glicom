@@ -1,6 +1,11 @@
 # Glicom
 https://glicom.pt
 
+
+# todo
+- chaves de parafuso
+X extensores USB
+
 # Spreadhsset
 https://docs.google.com/spreadsheets/d/1S6wPYTSRpvkI6Y364uU1xOrxR-ZeS56sCY8Rku4oZE0/edit#gid=0
 
