@@ -99,8 +99,8 @@
         </div>
 
         <div class="buttons">
-          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(51, 4, 5)"><span>A</span> Sim</button>
-          <button class="db" data-key="b" data-truth="F" v-on:click="goTo(52, 4, 4)"><span>B</span> Não</button>
+          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(51, 4, 5, 'Muito bem!')"><span>A</span> Sim</button>
+          <button class="db" data-key="b" data-truth="F" v-on:click="goTo(52, 4, 4, 'Tenta de novo.')"><span>B</span> Não</button>
         </div>
 
       </article>
@@ -124,8 +124,8 @@
 
 
         <div class="buttons">
-          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(6)"><span>A</span> Escrever</button>
-          <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Não Escrever</button>
+          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(51, 5, 6)"><span>A</span> Escrever</button>
+          <button class="db" data-key="b" data-truth="F" v-on:click="goTo(51, 5, 5)"><span>B</span> Não Escrever</button>
         </div>
       </article>
       </transition>
@@ -147,9 +147,9 @@
         <div class="buttons">
 
           <p><img src="img/misc/protein_a.png" /></p>
-          <button class="db" data-key="a" data-truth="F" v-on:click=""><span>A</span> Tumoral</button>
+          <button class="db" data-key="a" data-truth="F" v-on:click="goTo(52,6,6,'','doublefail')"><span>A</span> Tumoral</button>
           <p><img src="img/misc/normal_cell.png" /></p>
-          <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Normal</button>
+          <button class="db" data-key="b" data-truth="F" v-on:click="goTo(52,6,6,'','doublefail')"><span>B</span> Normal</button>
         </div>
 
       </article>
@@ -173,8 +173,8 @@
 
 
         <div class="buttons">
-          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(8)"><span>A</span> Sim</button>
-          <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Não</button>
+          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(51,7,8,'')"><span>A</span> Sim</button>
+          <button class="db" data-key="b" data-truth="F" v-on:click="goTo(52,7,7,'')"><span>B</span> Não</button>
         </div>
       </article>
       </transition>
@@ -193,9 +193,9 @@
 
         <div class="buttons">
            <img src="img/misc/protein_b.png" >
-          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(9)"><span>A</span> Tumoral</button>
+          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(51,8,9,'')"><span>A</span> Tumoral</button>
            <img src="img/misc/normal_cell.png" >
-          <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Normal</button>
+          <button class="db" data-key="b" data-truth="F" v-on:click="goTo(52,8,8,'')"><span>B</span> Normal</button>
         </div>
       </article>
       </transition>
@@ -214,8 +214,8 @@
 
 
         <div class="buttons">
-          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(10)"><span>A</span> Sim</button>
-          <button class="db" data-key="b" data-truth="V" v-on:click=""><span>B</span> Não</button>
+          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(51,9,10,'Boa escolha!')"><span>A</span> Sim</button>
+          <button class="db" data-key="b" data-truth="V" v-on:click="goTo(51,9,10,'Devias ter aceite, é bom para o CV!')"><span>B</span> Não</button>
         </div>
       </article>
       </transition>
@@ -234,8 +234,8 @@
 
 
         <div class="buttons">
-          <button class="db" data-key="a" data-truth="F" v-on:click=""><span>A</span> Sim</button>
-          <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Não</button>
+          <button class="db" data-key="a" data-truth="F" v-on:click="goTo(52,10,10,'', 'doublefail')"><span>A</span> Sim</button>
+          <button class="db" data-key="b" data-truth="F" v-on:click="goTo(52,10,10,'','doublefail')"><span>B</span> Não</button>
         </div>
       </article>
       </transition>
@@ -257,8 +257,8 @@
 
 
         <div class="buttons">
-          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(12)"><span>A</span> Sim</button>
-          <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Não</button>
+          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(51,11,12,'Prossegue')"><span>A</span> Sim</button>
+          <button class="db" data-key="b" data-truth="F" v-on:click="goTo(52,11,11,'Tenta de novo.')"><span>B</span> Não</button>
         </div>
       </article>
       </transition>
@@ -279,9 +279,9 @@
 
         <div class="buttons">
           <p><img src="img/misc/protein_c.png" ></p>
-          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(13)"><span>A</span> Tumoral</button>
+          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(51,12,13,'Isso mesmo!')"><span>A</span> Tumoral</button>
           <p><img src="img/misc/normal_cell.png" ></p>
-          <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Normal</button>
+          <button class="db" data-key="b" data-truth="F" v-on:click="goTo(52,12,12,':(')"><span>B</span> Normal</button>
         </div>
       </article>
       </transition>
@@ -300,8 +300,8 @@
 
 
         <div class="buttons">
-          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(14)"><span>A</span> Sim</button>
-          <button class="db" data-key="b" data-truth="V" v-on:click=""><span>B</span> Não</button>
+          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(51,13,13,'Aproveita e descansa!')"><span>A</span> Sim</button>
+          <button class="db" data-key="b" data-truth="V" v-on:click="goTo(52,13,13,'Devias ter ido e descansado!')"><span>B</span> Não</button>
         </div>
       </article>
       </transition>
@@ -320,8 +320,8 @@
 
 
         <div class="buttons">
-          <button class="db" data-key="a" data-truth="V" v-on:click=""><span>A</span> Sim</button>
-          <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Não</button>
+          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(51,14,15,'Tens mesmo talento! :)')"><span>A</span> Sim</button>
+          <button class="db" data-key="b" data-truth="F" v-on:click="goTo(52,14,14,'Tenta outra hipótese.')"><span>B</span> Não</button>
         </div>
       </article>
       </transition>
@@ -343,8 +343,8 @@
 
 
         <div class="buttons">
-          <button class="db" data-key="a" data-truth="F" v-on:click=""><span>A</span> Sim</button>
-          <button class="db" data-key="b" data-truth="F" v-on:click=""><span>B</span> Não</button>
+          <button class="db" data-key="a" data-truth="F" v-on:click="goTo(52,15,15,'Não é por aqui!')"><span>A</span> Sim</button>
+          <button class="db" data-key="b" data-truth="F" v-on:click="goTo(52,15,15,'Errar faz parte do processo.')"><span>B</span> Não</button>
         </div>
       </article>
       </transition>
@@ -355,6 +355,7 @@
       <article id="screen_51" class="screen" v-if="current_screen == 51">
         <div class="box f6">
           <h1>Certo!</h1>
+          <p>{{ message }}</p>
 
   
         </div>
@@ -364,7 +365,7 @@
         </div>
 
         <div class="buttons">
-          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(1)"><span>A</span> Avançar</button>
+          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(next_screen)"><span>A</span> Avançar</button>
         </div>
 
       </article>
@@ -375,7 +376,7 @@
       <article id="screen_52" class="screen" v-if="current_screen == 52">
         <div class="box f6">
           <h1>Errado!</h1>
-          <p>Perdeste <span></span>
+          <p>{{ message }}</p>
         </div>
 
         <div class="image center">
@@ -383,7 +384,7 @@
         </div>
 
         <div class="buttons">
-          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(1)"><span>A</span> Tentar de novo</button>
+          <button class="db" data-key="a" data-truth="V" v-on:click="goTo(previous_screen)"><span>A</span> Tentar de novo</button>
         </div>
 
       </article>
