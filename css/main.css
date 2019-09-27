@@ -9,7 +9,6 @@ html {
 
 body {
   font-family: 'Press Start 2P', Courier, monospace;
-  overflow-y: scroll;
 }
 
 html, body {
@@ -20,8 +19,6 @@ main {
   height: 100%;
   width: 100%;
   position: relative;
-  overflow-y: scroll;
-/*  overflow: hidden;*/
 }
 
 
@@ -41,16 +38,16 @@ section {
   background-repeat: none;
   background-size: 100%;
   background-position: center bottom;
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 
 .screen {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
   padding: 2rem;
   overflow: hidden;
 
@@ -75,9 +72,6 @@ section {
   border-bottom: 8px solid #2E3192;
   color: #FFF200;
   width: 100%;
-/*  background-image: url('../img/buttons/button_release.png');
-  background-repeat: none;
-  background-size: 100% 100%;*/
 }
 
 .screen button:hover {

@@ -5,6 +5,8 @@ var screens = [
     "text": false,
     "image": "img/screen_start.png",
     "button": "Start",
+    "button_key": "a",
+    "button_action": "goTo(2)"
   },
   {
     "id": 2,
