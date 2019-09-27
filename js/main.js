@@ -104,7 +104,7 @@ function render() {
         }
 
         if (screen_number == 1) {
-           document.querySelector('#dias').classList.add('dn')
+            location.reload(); 
         }
 
         console.log(app.doublefail_trials);
