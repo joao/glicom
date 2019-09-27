@@ -5,6 +5,9 @@ var dias_timer = 100; // ms
 var dias_subtract = 1;
 var dias_interval;
 
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 
 function render() {
 
