@@ -1,4 +1,8 @@
 
+*:focus {
+    outline: none;
+}
+
 html {
   background-color: black;
 }
@@ -46,6 +50,8 @@ section {
   background-repeat: none;
   background-size: 100%;
   background-position: center bottom;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 .screen {
@@ -89,7 +95,7 @@ section {
   background-image: url('../img/screens/screen_1.png');
   background-repeat: none;
   background-size: 100%;
-  background-position: center bottom;
+  background-position: center top;
 }
 
 
