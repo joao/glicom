@@ -139,7 +139,9 @@ section {
 }
 
 #screen_90 img,
-#screen_91 img {
+#screen_91 img,
+#screen_51 img,
+#screen_52 img {
   width: 50%;
   height: auto;
 }
