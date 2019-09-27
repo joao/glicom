@@ -123,6 +123,7 @@ function render() {
         // }
        });
       document.querySelector('.loading').classList.add('dn')
+      document.querySelector('#dias').classList.remove('dn')
       document.querySelector('.static_screens').classList.remove('dn')
     },
     watch: {
