@@ -2,9 +2,9 @@
 https://glicom.pt
 
 
-# todo
+# Material
 - chaves de parafuso
-X extensores USB
+- extensores USB
 
 # Spreadhsset
 https://docs.google.com/spreadsheets/d/1S6wPYTSRpvkI6Y364uU1xOrxR-ZeS56sCY8Rku4oZE0/edit#gid=0
@@ -26,21 +26,5 @@ Google Font:
 https://fonts.google.com/specimen/Press+Start+2P
 
 
-# abordagem
-1. formato story
-2. formato jogo/interactivo
 
 
-## Vue packages
-Prealoder:  
-https://www.npmjs.com/package/vue-image-preloader
-
-Referência:
-https://levelup.gitconnected.com/building-the-instagram-story-auto-play-ux-in-vue-347670e979ba
-
-
-# Domínio glicom.pt
-515260959
-Violinos Divertidos, Lda
-
-AABB
