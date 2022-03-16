@@ -215,3 +215,13 @@ div#dias {
   float: right;
 
 }
+
+/* this rule applies only for desktop-like aspect ratios (e.g. demo site) */
+@media screen and (min-aspect-ratio: 1 / 1) {
+  main {
+    height: 100%;
+    width: 38.55%;
+    margin: 0 auto;
+    position: relative;
+  }
+}
