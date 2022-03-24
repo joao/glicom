@@ -4,9 +4,9 @@
     // Inject gamepad events as keyboard events
     //
     
-    // simple input map, button 0 injects 'b', button 1 injects 'c', etc.
-    const KEY_MAP = ['b', 'c', 'a', 'd'];
-    
+    // set this to true to log button events to the console 
+    // (useful to discover button id's) for a new controller
+    const LOG_BUTTON_PRESSES = true;
     let pad = {
         device: null,
         buttons: [false, false, false, false],
@@ -37,7 +37,13 @@
         
         let pad_state = navigator.getGamepads()[pad.device];
         
-        for (let button_id = 0; button_id < pad.buttons.length; button_id++) {
+        if (LOG_BUTTON_PRESSES) {
+            for (let button_id = 0; button_id < pad_state.buttons.length; button_id++) {
+                if (pad_state.buttons[button_id].pressed) {
+                    console.log(`Controller button ${button_id} pressed`);
+                }
+            }
+        }
             let new_state = pad_state.buttons[button_id].pressed;
             if (new_state != pad.buttons[button_id]) {
                 if (new_state === false) {
